@@ -9,6 +9,7 @@ create table PETCLINIC_PET (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     NAME varchar(255),
+    DTYPE varchar(31),
     --
     IDENTIFICATION_NUMBER varchar(255) not null,
     BIRTH_DATE date,
@@ -110,3 +111,22 @@ create table PETCLINIC_VET_SPECIALTY_LINK (
     primary key (VET_ID, SPECIALTY_ID)
 )^
 -- end PETCLINIC_VET_SPECIALTY_LINK
+-- begin PETCLINIC_CAT
+create table PETCLINIC_CAT (
+    ID varchar(36) not null,
+    --
+    CLAW_LENGTH integer,
+    --
+    primary key (ID)
+)^
+-- end PETCLINIC_CAT
+-- begin PETCLINIC_BIRD
+create table PETCLINIC_BIRD (
+    ID varchar(36) not null,
+    --
+    WING_SPREAD integer,
+    BEAK_LENGTH integer,
+    --
+    primary key (ID)
+)^
+-- end PETCLINIC_BIRD
