@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd" caption="msg://browseCaption"
-  focusComponent="petsTable" messagesPack="com.haulmont.sample.petclinic.web.pet.pet">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://browseCaption"
+        focusComponent="petsTable" messagesPack="com.haulmont.sample.petclinic.web.pet.pet">
   <data readOnly="true">
     <collection id="petsCt"
       class="com.haulmont.sample.petclinic.entity.pet.Pet"
@@ -32,7 +33,13 @@
       </columns>
       <rowsCount/>
       <buttonsPanel id="buttonsPanel" alwaysVisible="true">
-        <button id="createBtn" action="petsTable.create"/>
+        <popupButton id="createBtn" caption="msg://createPet">
+          <actions>
+            <action id="createCat" caption="msg://createCat"/>
+            <action id="createBird" caption="msg://createBird"/>
+            <action id="createRat" caption="msg://createRat"/>
+          </actions>
+        </popupButton>
         <button id="editBtn" action="petsTable.edit"/>
         <button id="removeBtn" action="petsTable.remove"/>
       </buttonsPanel>
