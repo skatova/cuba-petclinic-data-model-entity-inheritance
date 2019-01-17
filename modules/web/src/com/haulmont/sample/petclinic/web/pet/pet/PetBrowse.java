@@ -33,26 +33,27 @@ public class PetBrowse extends StandardLookup<Pet> {
 
     @Subscribe("createBtn.createCat")
     protected void onCreateBtnCreateCat(Action.ActionPerformedEvent event) {
-        showCreateEditorForPet(metadata.create(Cat.class));
+        Cat cat = metadata.create(Cat.class);
+        showCreateEditorForPet(cat);
     }
 
     @Subscribe("createBtn.createBird")
     protected void onCreateBtnCreateBird(Action.ActionPerformedEvent event) {
-        showCreateEditorForPet(metadata.create(Bird.class));
+        Bird bird = metadata.create(Bird.class);
+        showCreateEditorForPet(bird);
     }
 
     @Subscribe("createBtn.createRat")
     protected void onCreateBtnCreateRat(Action.ActionPerformedEvent event) {
-        showCreateEditorForPet(metadata.create(Rat.class));
+        Rat rat = metadata.create(Rat.class);
+        showCreateEditorForPet(rat);
     }
 
-    
     private void showCreateEditorForPet(Pet pet) {
         screenBuilders.editor(petsTable)
                 .editEntity(pet)
                 .build()
                 .show();
     }
-
 
 }
