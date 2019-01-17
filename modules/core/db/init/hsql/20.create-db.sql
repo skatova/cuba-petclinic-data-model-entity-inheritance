@@ -19,3 +19,6 @@ alter table PETCLINIC_CAT add constraint FK_PETCLINIC_CAT_ID foreign key (ID) re
 -- begin PETCLINIC_BIRD
 alter table PETCLINIC_BIRD add constraint FK_PETCLINIC_BIRD_ID foreign key (ID) references PETCLINIC_PET(ID)^
 -- end PETCLINIC_BIRD
+-- begin PETCLINIC_RAT
+alter table PETCLINIC_RAT add constraint FK_PETCLINIC_RAT_ID foreign key (ID) references PETCLINIC_PET(ID)^
+-- end PETCLINIC_RAT

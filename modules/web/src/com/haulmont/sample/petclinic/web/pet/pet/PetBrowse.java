@@ -9,6 +9,7 @@ import com.haulmont.sample.petclinic.entity.pet.Bird;
 import com.haulmont.sample.petclinic.entity.pet.Cat;
 import com.haulmont.sample.petclinic.entity.pet.Pet;
 import com.haulmont.cuba.gui.screen.*;
+import com.haulmont.sample.petclinic.entity.pet.Rat;
 import org.apache.poi.ss.formula.functions.Rate;
 
 import javax.inject.Inject;
@@ -42,6 +43,7 @@ public class PetBrowse extends StandardLookup<Pet> {
 
     @Subscribe("createBtn.createRat")
     protected void onCreateBtnCreateRat(Action.ActionPerformedEvent event) {
+        showCreateEditorForPet(metadata.create(Rat.class));
     }
 
     

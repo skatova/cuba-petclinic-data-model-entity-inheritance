@@ -11,5 +11,6 @@
         <class>com.haulmont.sample.petclinic.entity.visit.Visit</class>
         <class>com.haulmont.sample.petclinic.entity.pet.Cat</class>
         <class>com.haulmont.sample.petclinic.entity.pet.Bird</class>
+        <class>com.haulmont.sample.petclinic.entity.pet.Rat</class>
     </persistence-unit>
 </persistence>
