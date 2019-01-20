@@ -42,7 +42,12 @@
       <rowsCount/>
       <buttonsPanel id="buttonsPanel"
         alwaysVisible="true">
-        <button id="createBtn" action="visitsTable.create"/>
+        <popupButton id="createBtn" caption="msg://create">
+          <actions>
+            <action id="createVisit" caption="msg://createVisit"/>
+            <action id="createCatVisit" caption="msg://createCatVisit"/>
+          </actions>
+        </popupButton>
         <button id="editBtn" action="visitsTable.edit"/>
         <button id="removeBtn" action="visitsTable.remove"/>
       </buttonsPanel>

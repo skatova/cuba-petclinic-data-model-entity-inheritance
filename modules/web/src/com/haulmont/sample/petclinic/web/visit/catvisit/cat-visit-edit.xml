@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.haulmont.sample.petclinic.web.visit.catvisit">
+    <data>
+        <instance id="catVisitDc"
+                  class="com.haulmont.sample.petclinic.entity.visit.CatVisit"
+                  view="visit-with-pet">
+            <loader/>
+        </instance>
+
+
+        <collection id="catsDc" class="com.haulmont.sample.petclinic.entity.pet.Cat" view="_base">
+            <loader>
+                <query>
+                    select e from petclinic_Cat e
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="catVisitDc">
+            <column width="250px">
+                <dateField id="visitDateField" property="visitDate"/>
+                <textField id="descriptionField" property="description"/>
+
+                <lookupPickerField id="petField" property="pet" optionsContainer="catsDc" caption="msg://cat"/>
+
+                <checkBox id="catTreeRequiredField" property="catTreeRequired"/>
+
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

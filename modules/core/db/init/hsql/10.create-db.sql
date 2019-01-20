@@ -96,10 +96,14 @@ create table PETCLINIC_VISIT (
     UPDATED_BY varchar(50),
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
+    DTYPE varchar(31),
     --
     VISIT_DATE date not null,
     DESCRIPTION varchar(4000),
     PET_ID varchar(36) not null,
+    --
+    -- from petclinic_CatVisit
+    CAT_TREE_REQUIRED boolean,
     --
     primary key (ID)
 )^
